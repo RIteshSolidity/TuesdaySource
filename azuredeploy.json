@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccountName": { "type": "string"}
+  },
+  "variables": {
+    "storageAccountType" :  "Standard_LRS"
+  },
+  "resources": [
+    {
+      "name": "[concat(parameters('storageAccountName'),copyIndex())]",
+      "location": "West Europe",
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2018-02-01",
+      "sku": {
+        "name": "[variables('storageAccountType')]"
+      },
+      "copy": {
+        "count": 5,
+        "name": "multiplestorage",
+        "mode": "Parallel"
+        
+      },
+      "kind": "StorageV2"
+    }
+  ],
+      "outputs": {
+        
+      }
+    }
