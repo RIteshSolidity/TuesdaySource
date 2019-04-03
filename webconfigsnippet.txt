@@ -1,0 +1,10 @@
+<appSettings>
+    <add key="webpages:Version" value="3.0.0.0"/>
+    <add key="webpages:Enabled" value="false"/>
+    <add key="ClientValidationEnabled" value="true"/>
+    <add key="UnobtrusiveJavaScriptEnabled" value="true"/>
+    <add key="ritesh" value="modi"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="sqldatastring" connectionString="Data Source=mdemoclasssql.database.windows.net;Initial Catalog=myecommerce;User ID=citynextadmin;Password=citynext!1234"/>
+  </connectionStrings>
