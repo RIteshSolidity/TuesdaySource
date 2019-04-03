@@ -1,0 +1,5 @@
+Login-AzureRmAccount
+Set-AzureRmContext -Subscription sfsdfsdfsdfsfsdfsf
+$app = New-AzureRmADApplication -DisplayName "customerappmclass" -IdentifierUris "http://customerappmclass" -HomePage "http://customerappmclass" -Password $(ConvertTo-SecureString -String Password -AsPlainText -Force) -Verbose
+New-AzureRmADServicePrincipal -ApplicationId $app.ApplicationId.Guid -DisplayName customerappmclass -Password $(ConvertTo-SecureString -String Password -AsPlainText -Force) -Role Owner -Verbose
+(Get-AzureRmContext).Tenant
