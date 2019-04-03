@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[Customers]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [firstName] VARCHAR(50) NULL, 
+    [lastName] VARCHAR(50) NULL
+)
+
+
+Insert into [dbo].[Customers] values (1, 'ritesh', 'modi')
+Insert into [dbo].[Customers] values (2, 'abc', 'xyz')
+Insert into [dbo].[Customers] values (3, 'tom', 'modi')
+Insert into [dbo].[Customers] values (4, 'sam', 'modi')
