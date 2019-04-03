@@ -2,9 +2,17 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "sqlServerName": { "value": "sdfsfsdfsdfcv" },
+    "sqlServerName": { "value": "sdfsfsdfsdfcv1" },
     "sqlServerLogin": { "value": "citynextadmin" },
-    "sqlServerPassword": { "value": "citynext!1234" },
+    "sqlServerPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/8e0502bf-56ff-4d96-81e7-11725e8065dd/resourcegroups/abcd/providers/Microsoft.KeyVault/vaults/customerkeyvault123"
+
+        },
+        "secretName": "sqlserverpasswordcustomer"
+      }
+    },
     "databaseName": { "value": "customer" }
   }
 }
